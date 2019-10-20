@@ -1,0 +1,34 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.bestweixiao.flutter_alipush">
+
+
+    <application>
+        <meta-data
+            android:name="com.alibaba.app.appkey"
+            android:value="${ALIPUSH_APPKEY}" /> <!-- 请填写你自己的- appKey -->
+        <meta-data
+            android:name="com.alibaba.app.appsecret"
+            android:value="${ALIPUSH_APPSECRET}" /> <!-- 请填写你自己的appSecret -->
+
+
+        <activity android:name=".PopupPushActivity" android:exported="true" />
+
+
+        <receiver
+            android:name=".AliPushReceiver"
+            android:exported="false"> <!-- 为保证receiver安全，建议设置不可导出，如需对其他应用开放可通过android：permission进行限制 -->
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.RECEIVE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+
+
+</manifest>
