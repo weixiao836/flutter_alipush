@@ -16,6 +16,6 @@ void main() {
   });
 
   test('getPlatformVersion', () async {
-    expect(await FlutterAlipush.platformVersion, '42');
+    expect(await Alipush.platformVersion, '42');
   });
 }

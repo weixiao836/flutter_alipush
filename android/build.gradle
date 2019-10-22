@@ -37,9 +37,9 @@ android {
 
 dependencies {
 
-    implementation 'com.aliyun.ams:alicloud-android-push:3.1.5'
-    implementation 'com.aliyun.ams:huawei-push:2.6.3.305'
-    implementation 'com.aliyun.ams:huawei-push-base:2.6.3.305'
-    implementation 'com.aliyun.ams:alicloud-android-third-push:3.0.8@aar'
+    api 'com.aliyun.ams:alicloud-android-push:3.1.5'
+    api 'com.aliyun.ams:huawei-push:2.6.3.305'
+    api 'com.aliyun.ams:huawei-push-base:2.6.3.305'
+    api 'com.aliyun.ams:alicloud-android-third-push:3.0.8@aar'
 
 }
